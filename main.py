@@ -116,7 +116,8 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         db_sess = db_session.create_session()
-        user = db_sess.query(User).filter(User.email == form.email.data).first()
+        user = db_sess.query(User).filter(
+            User.email == form.email.data).first()
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remember_me.data)
             return redirect("/")
@@ -187,9 +188,40 @@ def sets_lists_etc():
 def API():
     return render_template("API.html")
 
+
 @app.route("/first_ex")
 def first_ex():
     return render_template("first_ex.html")
+
+
+@app.route("/first_ex_ans")
+def first_ex_ans():
+    return render_template("first_ex_ans.html")
+
+@app.route("/second_ex")
+def second_ex():
+    return render_template("second_ex.html")
+
+
+@app.route("/second_ex_ans")
+def second_ex_ans():
+    return render_template("second_ex_ans.html")
+
+@app.route("/third_ex")
+def third_ex():
+    return render_template("third_ex.html")
+
+@app.route("/third_ex_ans")
+def third_ex_ans():
+    return render_template("third_ex_ans.html")
+
+@app.route("/fourth_ex")
+def fourth_ex():
+    return render_template("fourth_ex.html")
+
+@app.route("/fourth_ex_ans")
+def fourth_ex_ans():
+    return render_template("fourth_ex_ans.html")
 
 class Quote(Resource):
     def get(self, name='default'):
@@ -202,8 +234,6 @@ class Quote(Resource):
 
 
 api.add_resource(Quote, "/main", "/main/", "/main/<string:name>")
-
-
 
 
 if __name__ == '__main__':
