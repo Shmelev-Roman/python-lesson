@@ -183,6 +183,10 @@ def sets_lists_etc():
     return render_template("sets_lists_etc.html")
 
 
+@app.route("/API")
+def API():
+    return render_template("API.html")
+
 class Quote(Resource):
     def get(self, name='default'):
         if name == 'default':
