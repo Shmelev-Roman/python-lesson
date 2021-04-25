@@ -187,6 +187,10 @@ def sets_lists_etc():
 def API():
     return render_template("API.html")
 
+@app.route("/first_ex")
+def first_ex():
+    return render_template("first_ex.html")
+
 class Quote(Resource):
     def get(self, name='default'):
         if name == 'default':
