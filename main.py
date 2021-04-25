@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, redirect
 from flask_restful import Api, Resource
 from flask_login import LoginManager, login_user, login_required, logout_user
-import json
 from data import db_session
 from forms.user import RegisterForm, LoginForm
 from data.users import User
 
 app = Flask(__name__)
+db_session.global_init("db/users_data.db")
 login_manager = LoginManager()
 login_manager.init_app(app)
 api = Api(app)
@@ -196,9 +196,6 @@ class Quote(Resource):
 api.add_resource(Quote, "/main", "/main/", "/main/<string:name>")
 
 
-def main():
-    db_session.global_init("db/blogs.db")
-    app.run()
 
 
 if __name__ == '__main__':
