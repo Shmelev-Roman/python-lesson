@@ -211,6 +211,16 @@ def sets_lists_etc():
     return render_template("sets_lists_etc.html")
 
 
+@app.route("/nested_loops")
+def nested_loops():
+    return render_template("nested_loops.html")
+
+
+@app.route("/strings_and_slices")
+def strings_and_slices():
+    return render_template("strings_and_slices.html")
+
+
 @app.route("/API")
 def API():
     return render_template("API.html")
@@ -225,6 +235,7 @@ def first_ex():
 def first_ex_ans():
     return render_template("first_ex_ans.html")
 
+
 @app.route("/second_ex")
 def second_ex():
     return render_template("second_ex.html")
@@ -234,21 +245,26 @@ def second_ex():
 def second_ex_ans():
     return render_template("second_ex_ans.html")
 
+
 @app.route("/third_ex")
 def third_ex():
     return render_template("third_ex.html")
+
 
 @app.route("/third_ex_ans")
 def third_ex_ans():
     return render_template("third_ex_ans.html")
 
+
 @app.route("/fourth_ex")
 def fourth_ex():
     return render_template("fourth_ex.html")
 
+
 @app.route("/fourth_ex_ans")
 def fourth_ex_ans():
     return render_template("fourth_ex_ans.html")
+
 
 class Quote(Resource):
     def get(self, name='default'):

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="static/img/python_94570.png" type="image/icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Строки и срезыы</title>
+</head>
+
+<body>
+    <div class="alert alert-primary" role="alert">
+        <h2>Строки и срезы</h2>
+    </div>
+    <div class="alert alert-dark" role="alert">
+        <p>Срез (slice) — извлечение из данной строки одного символа или некоторого фрагмента 
+            (подстроки).
+            <br>
+            <br>
+            Есть три формы срезов. Самая простая форма среза: взятие одного символа строки, а именно, S[i] — 
+            это срез, состоящий из одного символа, который имеет номер i, при этом считая, что нумерация начинается с числа 
+            0. То есть если S = ‘Hello’, то S[0]=='H', S[1]=='e', S[2]=='l', S[3]=='l', S[4]=='o'. Номера символов в строке 
+            (а также в других структурах данных: списках, кортежах) называются индексом. Если указать отрицательное значение
+            индекса, то номер будет отсчитываться с конца, начиная с номера -1. Если же номер символа в срезе строки S 
+            больше либо равен len(S), или меньше, чем -len(S), то при обращении к этому символу строки произойдет ошибка 
+            IndexError: string index out of range. Также к строкам можно применять срезы с двумя или тремя параметрами. В 
+            таком случае первым параметром будет индекс элемента, с которого начинается срез, вторым параметром будет 
+            являться индекс элемента конца среза + 1. То есть 'hello'[0:2] = 'he'. Последний элемент - это шаг, 
+            с которым будут пропускаться элементы среза ('hello'[0:3:2] = hl).</p>
+    </div>
+</body>
+
+</html>
