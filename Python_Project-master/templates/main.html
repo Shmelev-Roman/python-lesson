@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="static/img/python_94570.png" type="image/icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script>
+    function digitalClock() {
+      var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+      //* добавление ведущих нулей */
+      if (hours < 10) hours = "0" + hours;
+      if (minutes < 10) minutes = "0" + minutes;
+      if (seconds < 10) seconds = "0" + seconds;
+      document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+      setTimeout("digitalClock()", 1000);
+    }
+  </script>
+  <title>Python уроки</title>
+  <style>
+    .menu {
+      position: fixed;
+      /* Фиксированное положение */
+      right: 10px;
+      /* Расстояние от правого края окна браузера */
+      top: 1%;
+      /* Расстояние сверху */
+      padding: 7px;
+      /* Поля вокруг текста */
+      background: #ffe;
+      /* Цвет фона */
+      border: 1px solid #333;
+      /* Параметры рамки */
+    }
+    .menu_2{
+      position: fixed;
+      /* Фиксированное положение */
+      right: 120px;
+      /* Расстояние от правого края окна браузера */
+      top: 1%;
+      /* Расстояние сверху */
+      padding: 7px;
+      /* Поля вокруг текста */
+      background: #ffe;
+      /* Цвет фона */
+      border: 1px solid #333;
+      /* Параметры рамки */
+    }
+    .text {
+      height: 1000px;
+    }
+
+    .clock {
+      position: fixed;
+      /* Фиксированное положение */
+      right: 0px;
+      /* Расстояние от правого края окна браузера */
+      top: 48.7%;
+      /* Расстояние сверху */
+      padding: 3px;
+      /* Поля вокруг текста */
+      background: rgb(122, 122, 121);
+      /* Цвет фона */
+      border: 1px solid rgb(87, 78, 78);
+      /* Параметры рамки */
+    }
+
+    body {
+      font: 11pt Arial, Helvetica, sans-serif;
+      /* Рубленый шрифт текста */
+      margin: 0;
+      /* Отступы на странице */
+    }
+
+    h1 {
+      font-size: 36px;
+      /* Размер шрифта */
+      margin: 0;
+      /* Убираем отступы */
+      color: #fc6;
+      /* Цвет текста */
+    }
+
+    h2 {
+      margin-top: 0;
+      /* Убираем отступ сверху */
+    }
+
+    #header {
+      /* Верхний блок */
+      background: #1097db;
+      /* Цвет фона */
+      padding: 10px;
+      /* Поля вокруг текста */
+    }
+
+    #sidebar {
+      /* Левая колонка */
+      float: left;
+      /* Обтекание справа */
+      border: 1px solid #333;
+      /* Параметры рамки вокруг */
+      width: 20%;
+      /* Ширина колонки */
+      padding: 5px;
+      /* Поля вокруг текста */
+      margin: 10px 10px 20px 5px;
+      /* Значения отступов */
+    }
+
+    #content {
+      /* Правая колонка */
+      margin: 10px 5px 20px 25%;
+      /* Значения отступов */
+      padding: 5px;
+      /* Поля вокруг текста */
+      border: 1px solid #333;
+      /* Параметры рамки */
+    }
+
+    #footer {
+      /* Нижний блок */
+      background: rgb(85, 76, 76);
+      /* Цвет фона */
+      padding: 5px;
+      /* Поля вокруг текста */
+      color: rgb(202, 200, 200);
+      /* Цвет текста */
+      clear: left;
+      /* Отменяем действие float */
+    }
+  </style>
+</head>
+
+<body>
+  <p><img src="static/img/python-logo-glassy.png" width="30" height="30" alt="error"></p>
+  <div id="header">
+    <h1>Python уроки</h1>
+  </div>
+  <div id="sidebar">
+    <p><a href="install_python">Скачивание и установка Python</a></p>
+    <p><a href="data_type">Типы данных в Python</a></p>
+    <p><a href="conditional_operators">Условные операторы в Python</a></p>
+    <p><a href="basic_loops">Базовые циклы в Python</a></p>
+    <p><a href="sets_lists_etc">Множества, списки, словари и т.д</a></p>
+  </div>
+  <div id="content">
+    <h2>Описание проекта</h2>
+    <br>
+    <p>Язык программирования Python 3 — это мощный инструмент для создания программ самого разнообразного назначения,
+      доступный даже для новичков. С его помощью можно решать задачи различных типов.</p>
+    <p>Этот сайт призван помочь начинающим и чайникам научиться программировать на python 3.</p>
+    <p>Язык Python обладает некоторыми примечательными особенностями, которые обуславливают его широкое распространение.
+      Из-за этого многие новички нуждаются в бесплатном и доступном ресурсе для изучения Python.</p>
+  </div>
+  <div class="menu"><a href="login">Авторизация</a></div>
+  <div class="menu_2"><a href="register">Регистрация</a></div>
+  <div id="footer">&copy; Simon & Roman</div>
+  <div class="clock" id="id_clock"></div>
+  <script>digitalClock();</script>
+</body>
+
+</html>
