@@ -300,4 +300,4 @@ api.add_resource(Quote, "/main", "/main/", "/main/<string:name>")
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5050, host='127.0.0.1')
