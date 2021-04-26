@@ -266,6 +266,26 @@ def fourth_ex_ans():
     return render_template("fourth_ex_ans.html")
 
 
+@app.route("/fifth_ex")
+def fifth_ex():
+    return render_template("fifth_ex.html")
+
+
+@app.route("/fifth_ex_ans")
+def fifth_ex_ans():
+    return render_template("fifth_ex_ans.html")
+
+
+@app.route("/sixth_ex")
+def sixth_ex():
+    return render_template("sixth_ex.html")
+
+
+@app.route("/sixth_ex_ans")
+def sixth_ex_ans():
+    return render_template("sixth_ex_ans.html")
+
+
 class Quote(Resource):
     def get(self, name='default'):
         if name == 'default':
